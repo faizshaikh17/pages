@@ -41,7 +41,7 @@ function App() {
             </div>
             <div className='space-y-3'>
               {reachoutDetails.map((item: Obj) => (
-                <div className='flex items-center p-5 bg-neutral-900/50 justify-between sm:h-24 h-20 sm:w-full w-[21.5rem] rounded-2xl border-2 border-white/10 shadow-[inset_0_6px_4px_rgba(255,255,255,0.03),inset_0_-6px_4px_rgba(255,255,255,0.03)]'>
+                <div className='flex items-center sm:p-5 p-3 bg-neutral-900/50 justify-between sm:h-24 h-20 sm:w-full w-[21.5rem] rounded-2xl border-2 border-white/10 shadow-[inset_0_6px_4px_rgba(255,255,255,0.03),inset_0_-6px_4px_rgba(255,255,255,0.03)]'>
                   <div className='flex gap-5'>
                     <span className='flex items-center bg-neutral-900/50 justify-center h-13 w-13 border-2 border-white/20 rounded-lg shadow-[0_0_1px_rgba(255,255,255,0.5)]'>
                       {item.tag}
