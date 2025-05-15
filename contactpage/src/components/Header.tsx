@@ -1,7 +1,8 @@
-import { Zap, ArrowUpRight } from "lucide-react"
+import { Menu, X, Zap, ArrowUpRight } from "lucide-react"
 // import { Link } from "react-router-dom"
+import { useState } from "react"
 export function Header() {
-
+    const [isOpen, setIsOpen] = useState(false)
     interface Obj {
         name: string
     }
@@ -16,7 +17,7 @@ export function Header() {
 
     return (
         <header>
-            <div className="w-[43rem] text-[0.95rem] flex justify-between font-semibold items-center h-14 bg-transparent border-[2px] border-white/20 backdrop-blur-md rounded-xl shadow-[inset_0_6px_4px_rgba(255,255,255,0.1),inset_0_-6px_4px_rgba(255,255,255,0.1)]">
+            <div className="w-[43rem] text-[0.95rem] hidden sm:flex justify-between font-semibold items-center h-14 bg-transparent border-[2px] border-white/20 backdrop-blur-md rounded-xl shadow-[inset_0_6px_4px_rgba(255,255,255,0.1),inset_0_-6px_4px_rgba(255,255,255,0.1)]">
                 <span className="h-12 w-12 flex items-center justify-center text-white/50  border-[2px] rounded-xl m-0.5 border-white/20 shadow-[inset_0_6px_4px_rgba(255,255,255,0.1),inset_0_-6px_4px_rgba(255,255,255,0.1)]">
                     <Zap />
                 </span>
@@ -32,6 +33,17 @@ export function Header() {
                     </span>
                 </button>
             </div>
+
+            <button className="absolute z-50 m-2 sm:hidden right-0" onClick={() => setIsOpen(prev => !prev)}>
+                {isOpen ? <X /> : <Menu />}
+            </button>
+            {isOpen &&
+                <div className="flex absolute right-0 items-start gap-4 p-4 flex-col w-[75%] bg-neutral-900 rounded-2xl border-2 border-white/10 shadow-[inset_0_6px_4px_rgba(255,255,255,0.03),inset_0_-6px_4px_rgba(255,255,255,0.03)]">
+                    {navItems.map((item: Obj) => (
+                        <span>{item.name}</span>
+                    ))}
+                </div>
+            }
         </header>
     )
 }
