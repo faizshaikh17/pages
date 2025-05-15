@@ -21,7 +21,7 @@ function App() {
       <main className='relative min-h-screen space-y-44'>
         <section className='relative flex justify-center'>
           <Header />
-          <div className='sm:text-[12.5rem] text-[5rem] absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/4 pointer-events-none font-bold opacity-2 tight'>
+          <div className='sm:text-[12.5rem] text-[5rem] absolute sm:top-0 top-1/2 left-1/2 -translate-x-1/2 translate-y-1/4 pointer-events-none font-bold opacity-2 tracking-tighter sm:tight'>
             CONTACT
           </div>
         </section>
