@@ -26,23 +26,28 @@ export function Header() {
                         <span className="flex justify-center items-center rounded-xl hover:bg-white/5  h-12 px-4 hover:shadow-[6px_0_6px_rgba(0,0,0,0.1),-6px_0_6px_rgba(0,0,0,0.1),inset_0_6px_4px_rgba(255,255,255,0.1)]"><p className="text-white/60 z-10">{item.name}</p></span>))
                     }
                 </div>
-                <button className="h-11 outline-none w-40 flex items-center bg-black/15 justify-between border-2 rounded-xl mx-1 border-white/20 shadow-[0_8px_20px_rgba(255,255,255,0.1),0_-8px_20px_rgba(255,255,255,0.1)]">
-                    <p className="flex items-center justify-center h-8.5 w-30 text-white/60 text-[0.95rem]"><p>Get Template</p></p>
-                    <span className="h-9 w-9 flex items-center opacity-60 text-white justify-center mx-[0.15rem] rounded-r-lg m-0.5 bg-white/10">
-                        <ArrowUpRight />
-                    </span>
-                </button>
+                <a href="https://github.com/faizshaikh17/pages" target="_blank" rel="noopener noreferrer">
+                    <button className="h-11 outline-none w-40 flex items-center bg-black/15 justify-between border-2 rounded-xl mx-1 border-white/20 shadow-[0_8px_20px_rgba(255,255,255,0.1),0_-8px_20px_rgba(255,255,255,0.1)]">
+                        <p className="flex items-center justify-center h-8.5 w-30 text-white/60 text-[0.95rem]"><p>Get Template</p></p>
+                        <span className="h-9 w-9 flex items-center opacity-60 text-white justify-center mx-[0.15rem] rounded-r-lg m-0.5 bg-white/10">
+                            <ArrowUpRight />
+                        </span>
+                    </button>
+                </a>
             </div>
 
-            <button className="absolute z-50 m-2 sm:hidden right-0" onClick={() => setIsOpen(prev => !prev)}>
-                {isOpen ? <X /> : <Menu />}
+            <button className="fixed z-50 sm:hidden right-5" onClick={() => setIsOpen(prev => !prev)}>
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
             {isOpen &&
-                <div className="flex absolute right-0 items-start gap-4 p-4 flex-col w-[75%] bg-neutral-900 rounded-2xl border-2 border-white/10 shadow-[inset_0_6px_4px_rgba(255,255,255,0.03),inset_0_-6px_4px_rgba(255,255,255,0.03)]">
-                    {navItems.map((item: Obj) => (
-                        <span>{item.name}</span>
-                    ))}
-                </div>
+                <>
+                    <div className=" inset-0 fixed backdrop-blur-xs z-[9] min-h-screen" />
+                    <div className="flex fixed items-start gap-8 p-4 flex-col bg-neutral-900/70 backdrop-blur-md border-2 border-white/10 shadow-[inset_0_6px_4px_rgba(255,255,255,0.03),inset_0_-6px_4px_rgba(255,255,255,0.03)] inset-y-0 right-0 w-[75%] h-[50%] max-w-md z-20 transition-transform duration-500 translate-x-0 ease-in-out">
+                        {navItems.map((item: Obj) => (
+                            <span className="text-xl cursor-pointer ">{item.name}</span>
+                        ))}
+                    </div>
+                </>
             }
         </header>
     )

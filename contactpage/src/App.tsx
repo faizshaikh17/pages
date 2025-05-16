@@ -59,10 +59,10 @@ function App() {
             </div>
           </div>
           <div className=' sm:w-[40rem] w-[21.5rem] flex flex-col p-2.5 rounded-2xl border-2 border-white/10 shadow-[inset_0_6px_4px_rgba(255,255,255,0.03),inset_0_0_20px_rgba(255,255,255,0.1)]'>
-            <form className='flex flex-col gap-2.5' action="">
+            <form className='flex flex-col gap-2.5' action="/submit">
               <input className='h-14 border-[2px] font-semibold bg-white/5 px-4 focus:outline-none border-white/5 backdrop-blur-md rounded-xl' type="text" name='name' placeholder='Name' />
               <input className='h-14 border-[2px] font-semibold bg-white/5 px-4 border-white/5 focus:outline-none backdrop-blur-md rounded-xl' type="text" name='email' placeholder='Email' />
-              <textarea className='sm:min-h-[21rem] h-[10rem] font-semibold border-[2px] bg-white/5 p-4 focus:outline-none border-white/5 backdrop-blur-md rounded-xl' placeholder='Message' name='message' />
+              <textarea className='sm:min-h-[17rem] h-[10rem] font-semibold border-[2px] bg-white/5 p-4 focus:outline-none border-white/5 backdrop-blur-md rounded-xl' placeholder='Message' name='message' />
               <button className='h-14 border-[2px] font-semibold bg-white/70 text-black px-4 border-white/5 backdrop-blur-md rounded-xl'>Submit</button>
             </form>
           </div>
