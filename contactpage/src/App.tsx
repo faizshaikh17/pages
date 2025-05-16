@@ -28,7 +28,7 @@ function App() {
         <section className='sm:flex z-20 gap-4 justify-center space-y-16 items-center'>
           <div className='gap-15 flex flex-col w-[43rem]'>
             <div className='flex flex-col gap-6'>
-              <button className='h-12 flex items-center w-32 border shadow-[inset_0_6px_4px_rgba(0,0,0,0.2),inset_0_-6px_4px_rgba(0,0,0,0.2),0_6px_6px_rgba(255,255,255,0.1),0_-6px_6px_rgba(255,255,255,0.1)] font-semibold border-white/20 bg-neutral-800 rounded-3xl'>
+              <button className='h-12 flex items-center w-32 border shadow-[inset_0_6px_4px_rgba(0,0,0,0.2),inset_0_-6px_4px_rgba(0,0,0,0.2),0_6px_6px_rgba(255,255,255,0.1),0_-6px_6px_rgba(255,255,255,0.1)] font-semibold border-white/20 bg-neutral-800 hover:bg-neutral-500/50 rounded-3xl'>
                 <span className='h-10 w-10 flex justify-center items-center rounded-full mx-1 bg-neutral-800 bg-radial-[at_50%_25%] from-neutral-600 to-zinc-900 to-65%'>
                   <Facebook size={19} />
                 </span>
@@ -51,7 +51,7 @@ function App() {
                       <p className='text-white/40'>{item.contact}</p>
                     </div>
                   </div>
-                  <button className='h-10 w-10 flex items-center justify-center bg-neutral-800 rounded-3xl'>
+                  <button className='h-10 w-10 flex items-center justify-center bg-neutral-800 hover:bg-neutral-800/80 rounded-3xl'>
                     <ArrowUpRight />
                   </button>
                 </div>
@@ -63,7 +63,7 @@ function App() {
               <input className='h-14 border-[2px] font-semibold bg-white/5 px-4 focus:outline-none border-white/5 backdrop-blur-md rounded-xl' type="text" name='name' placeholder='Name' />
               <input className='h-14 border-[2px] font-semibold bg-white/5 px-4 border-white/5 focus:outline-none backdrop-blur-md rounded-xl' type="text" name='email' placeholder='Email' />
               <textarea className='sm:min-h-[17rem] h-[10rem] font-semibold border-[2px] bg-white/5 p-4 focus:outline-none border-white/5 backdrop-blur-md rounded-xl' placeholder='Message' name='message' />
-              <button className='h-14 border-[2px] font-semibold bg-white/70 text-black px-4 border-white/5 backdrop-blur-md rounded-xl'>Submit</button>
+              <button className='h-14 border-[2px] font-semibold bg-white/70 hover:bg-white/80 text-black px-4 border-white/5 backdrop-blur-md rounded-xl'>Submit</button>
             </form>
           </div>
         </section>

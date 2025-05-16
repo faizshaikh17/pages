@@ -27,7 +27,7 @@ export function Header() {
                     }
                 </div>
                 <a href="https://github.com/faizshaikh17/pages" target="_blank" rel="noopener noreferrer">
-                    <button className="h-11 outline-none w-40 flex items-center bg-black/15 justify-between border-2 rounded-xl mx-1 border-white/20 shadow-[0_8px_20px_rgba(255,255,255,0.1),0_-8px_20px_rgba(255,255,255,0.1)]">
+                    <button className="h-11 outline-none hover:bg-black/30 w-40 flex items-center bg-black/15 justify-between border-2 rounded-xl mx-1 border-white/20 shadow-[0_8px_20px_rgba(255,255,255,0.1),0_-8px_20px_rgba(255,255,255,0.1)]">
                         <p className="flex items-center justify-center h-8.5 w-30 text-white/60 text-[0.95rem]"><p>Get Template</p></p>
                         <span className="h-9 w-9 flex items-center opacity-60 text-white justify-center mx-[0.15rem] rounded-r-lg m-0.5 bg-white/10">
                             <ArrowUpRight />
